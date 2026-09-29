@@ -19,6 +19,10 @@
     </licenses>
 
     <artifactId>kafka-schema-registry-client</artifactId>
+    <!-- Overrides the inherited parent version so this patched build (safer defaults, see
+         issue #4588) installs under a distinct coordinate, side by side with the real released
+         8.2.1 jar, instead of silently overwriting it in the local Maven repository. -->
+    <version>8.2.1-safer-defaults-4588</version>
     <packaging>jar</packaging>
     <name>kafka-schema-registry-client</name>
 
